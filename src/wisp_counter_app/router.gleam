@@ -1,5 +1,5 @@
-import wisp_counter_app/web.{type Context}
 import wisp.{type Request, type Response}
+import wisp_counter_app/web.{type Context}
 
 const html = "<!DOCTYPE html>
 <html lang=\"en\">

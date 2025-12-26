@@ -1,9 +1,9 @@
 import gleam/erlang/process
-import wisp_counter_app/router
-import wisp_counter_app/web.{Context}
 import mist
 import wisp
 import wisp/wisp_mist
+import wisp_counter_app/router
+import wisp_counter_app/web.{Context}
 
 pub fn main() {
   // This sets the logger to print INFO level logs, and other sensible defaults

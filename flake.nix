@@ -73,6 +73,9 @@
               pkgs.gleam
               pkgs.beam28Packages.erlang
               pkgs.beam28Packages.rebar3
+
+              # Fly.io CLI to deploy
+              pkgs.flyctl
             ];
           };
         };

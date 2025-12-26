@@ -1,24 +1,19 @@
-import lustre/element
 import lustre/attribute
+import lustre/element
 import lustre/element/html
 import wisp.{type Request, type Response}
+import wisp_counter_app/view
 import wisp_counter_app/web.{type Context}
 
 pub fn handle_request(req: Request, ctx: Context) -> Response {
   use _req <- web.middleware(req, ctx)
 
-  let body =
-    html.html([], [
-      html.head([], [
-        html.title([], "wisp_counter_app"),
-        html.link([attribute.rel("stylesheet"), attribute.href("/static/styles.css")]),
-      ]),
-      html.body([], [
-        html.p([], [element.text("Hello from constructed text by Lustre")])
-      ]),
-    ])
+  let initial_model = 0
 
-  body
-  |> element.to_string()
+  let html_content =
+    view.view(initial_model)
+    |> element.to_string()
+
+  html_content
   |> wisp.html_response(200)
 }

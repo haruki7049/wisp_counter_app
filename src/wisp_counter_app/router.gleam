@@ -1,6 +1,4 @@
-import lustre/attribute
 import lustre/element
-import lustre/element/html
 import wisp.{type Request, type Response}
 import wisp_counter_app/view
 import wisp_counter_app/web.{type Context}

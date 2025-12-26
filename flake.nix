@@ -71,10 +71,8 @@
 
               # Gleam-lang
               pkgs.gleam
-              pkgs.erlang
-              pkgs.nodePackages.nodejs
-              pkgs.deno
-              pkgs.bun
+              pkgs.beam28Packages.erlang
+              pkgs.beam28Packages.rebar3
             ];
           };
         };
